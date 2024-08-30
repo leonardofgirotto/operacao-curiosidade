@@ -11,32 +11,81 @@
 </head>
 <body>
     <main>
-        <section id="login">
-            <div id="slice-onion">
-                <!-- Aqui vai a imagem em CSS -->
-            </div>
-            <div class="login-form">
-                <div class="logo">
-                    <img src="../../img/big_onion_write_free.svg" alt="Onion Logo">
-                    <h1>peração Curiosidade</h1>
+        <section id="container">
+            <div class="login-box">
+                <div class="login-form">
+                    <div class="logo">
+                        <img src="../../img/logoescrita.svg" alt="Onion Logo">
+                    </div>
+                    <p>Bem-vindo de volta! Faça login para continuar.</p>
+                    <hr>
+                    <form action="#" method="post" autocomplete="on">
+                        <div class="campo">
+                            <label for="ilogin">E-mail ou nome de usuário</label>
+                            <div class="input-container">
+                                <span class="material-symbols-outlined">mail</span>
+                                <input type="email" name="login" id="ilogin" placeholder="Insira aqui seu e-mail ou nome de usuário" autocomplete="email">
+                            </div>
+                        </div>
+                        <div class="campo">
+                            <label for="isenha">Senha</label>
+                            <div class="input-container">
+                                <span class="material-symbols-outlined">lock</span>
+                                <input type="password" name="senha" id="isenha" placeholder="Insira aqui sua senha" autocomplete="current-password">
+                            </div>
+                        </div>
+                        <div id="forgot-password">
+                            <p>Esqueceu sua senha? <a href="#" class="botao">Clique aqui</a></p>
+                        </div>
+                        <input type="submit" value="ENTRAR">
+                    </form>
                 </div>
-                <p>Bem-vindo de volta! Faça login para continuar.</p>
-                <hr>
-                <form action="#" method="post" autocomplete="on">
-                    <div class="campo">
-                        <p>E-mail ou nome de usuário</p>
-                        <span class="material-symbols-outlined">mail</span>
-                        <input type="email" name="login" id="ilogin" placeholder="insira aqui seu e-mail ou nome de usuário" autocomplete="email">
-                    </div>
-                    <div class="campo">
-                        <span class="material-symbols-outlined">lock</span>
-                        <input type="password" name="senha" id="isenha" placeholder="insira aqui sua senha" autocomplete="current-password">
-                        <label for="isenha">Senha</label>
-                    </div>
-                    <input type="submit" value="Entrar">
-                    <p>Esqueceu a senha? <a href="#" class="botao">Clique aqui</a></p>
-                </form>
             </div>
+            <section id="cebola">
+
+                <div class="container-carrossel">
+                    <div class="carrossel">
+                        <div class="cavalinhos">
+                            <input type="radio" name="radio-btn" id="radio1">
+                            <input type="radio" name="radio-btn" id="radio2">
+                            <input type="radio" name="radio-btn" id="radio3">
+                            <input type="radio" name="radio-btn" id="radio4">
+                            <div class="cavalo">
+                                <img src="../../img/big_onion_facts_and_data.svg" alt="fatos">
+                                <p>"A primeira camada da cebola é sobre conhecer o colaborador além do cargo, revelando suas <span>necessidades</span> e <span>objetivos pessoais</span>."</p>
+                            </div>
+                            <div class="cavalo primeiro">
+                                <img src="../../img/big_onion_interests.svg" alt="interesses">
+                                <p>"O desafio é desvendar os interesses e espectativas reais do colaborador, indo além da superfície para entender o significado por trás deles."</p>
+                            </div>
+                            <div class="cavalo">
+                                <img src="../../img/big_onion_feelings.svg" alt="sentimentos">
+                                <p>"Atingir essa camada significa ir além do técnico, explorando a esfera humana para conhecer os sentimentos do colaborador, entendendo quem ele realmente é, isso ajuda a fortaecer laços e a fomentar um comprometimento genuíno."</p>
+                            </div>
+                            <div class="cavalo">
+                                <img src="../../img/big_onion_values.svg" alt="valores">
+                                <p>"Aprofundar o relacionameto transfoma o cumprimento em compromisso, revelando a essência do colaborador e o que o move, estabelecendo assim o mais forte ponto de conexão"</p>
+                            </div>
+                            <div class="navegação-auto">
+                                <div class="auto-bnt1"></div>
+                                <div class="auto-bnt2"></div>
+                                <div class="auto-bnt3"></div>
+                                <div class="auto-bnt4"></div>
+                            </div>
+                        </div>
+                        <div class="navegação-manual">
+                            <label for="radio1" class="btn-manual"></label>
+                            <label for="radio2" class="btn-manual"></label>
+                            <label for="radio3" class="btn-manual"></label>
+                            <label for="radio4" class="btn-manual"></label>
+                        </div>
+                        <div class="logo-forlogic">
+                            <p>Powered by</p>
+                            <img src="../../img/FORLOGIC_LOGO+SIMBOLO_PRETO2 (1).svg" alt="logofor">
+                        </div>
+                    </div>
+                </div>
+            </section>
         </section>
     </main>
 </body>

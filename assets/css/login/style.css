@@ -1,7 +1,9 @@
 @charset "UTF-8";
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 * {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: Poppins;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -13,96 +15,254 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #f5f5f5;
+    background-color: #ffffff;
 }
 
-div.login-form {
+main {
+    width: 100%;
+    height: 100%;
     background-color: white;
-    width: 320px;
-    padding: 20px;
-    border-radius: 20px;
-    box-shadow: 0px 0px 10px hsla(0, 0%, 0%, 0.450);
-    text-align: center;
 }
 
-div.login-form .logo {
+#container {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
-    margin-bottom: 20px;
+    width: 100%;
+    height: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.login-box {
+
+    width: 40%;
+    height: 80%;
+    background-color: white;
+    padding: 40px;
+    margin: 50px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px hsla(0, 0%, 0%, 0.197);
 }
 
 div.login-form .logo img {
-    height: 40px;
-    width: 40px;
-    margin-right: 5px; /* Reduced margin to bring text closer */
+    width: 400px; /* Aumenta a largura da logo */
+    height: auto; /* Mantém a proporção da imagem */
+    display: block; /* Centraliza a imagem */
+    margin: 0 auto; /* Adiciona margem automática para centralizar */
 }
 
-div.login-form .logo h1 {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #6f42c1;
-    margin-left: -5px; /* Optional: slightly overlap the text closer to the logo */
+.login-form p {
+    font-size: 0.8rem;
+    color: #000;
+    text-align: center;
+    margin-top: 20px;
+    
 }
 
-div.login-form p {
-    font-size: 0.9rem;
-    color: #555;
-}
-
-div.login-form hr {
+.login-form hr {
     border: 0;
     border-top: 1px solid #ddd;
     margin: 20px 0;
 }
 
-div.login-form .campo {
+.login-form .campo {
     margin-bottom: 20px;
     text-align: left;
 }
 
-div.login-form .campo p {
+.login-form .campo label {
     font-size: 0.8rem;
-    color: #777;
+    color: #000;
     margin-bottom: 5px;
+    display: block;
 }
 
-div.login-form .campo .material-symbols-outlined {
-    vertical-align: middle;
+.input-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-container .material-symbols-outlined {
+    position: absolute;
+    left: 10px;
     font-size: 20px;
-    margin-right: 5px;
     color: #6f42c1;
 }
 
-div.login-form .campo input {
+.input-container input {
     width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
+    padding: 15px 10px 10px 35px;
+    border: 1px solid #dddddd;
     border-radius: 5px;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
 }
 
-div.login-form input[type="submit"] {
-    width: 100%;
+.login-form input[type="submit"] {
+    width: 40%;
+    display: block;
+    margin: auto;
+    margin-top: 50px;
     padding: 10px;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     background-color: #6f42c1;
     color: white;
     font-size: 1rem;
     cursor: pointer;
 }
 
-div.login-form input[type="submit"]:hover {
+div#forgot-password {
+    display: flex;
+    justify-content: flex-end;
+}
+
+div#forgot-password > p {
+    color: #6b1bc6;
+    font-size: smaller;
+}
+
+.login-form input[type="submit"]:hover {
     background-color: #5a34a3;
 }
 
-div.login-form .botao {
+div.login-form p {
+    color: #000000;
+    font-size: 0.8rem; /* Ajuste de tamanho */
+}
+
+.botao {
     color: #6f42c1;
     text-decoration: none;
     font-size: 0.8rem;
 }
 
-div.login-form .botao:hover {
+.botao:hover {
     text-decoration: underline;
 }
+
+.carousel-box {
+    flex: 1;
+    max-width: 600px;
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section#cebola{
+    display: block;
+    width: 60%;
+}
+
+div#form{
+    width: 40%;
+    height: 90%;
+    left: 25%;
+    border-radius: 20px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.347);
+}
+
+div#primeiro{
+    padding-top: 40px;
+}
+
+div.logo > img{
+    padding-top: 65px;
+}
+
+div.carrossel{
+    margin-top: -10%;
+    margin-left: 15%;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+div.cavalinhos{
+    width: 400%;
+    height: 85%;
+    display: flex;
+}
+
+div.cavalinhos input{
+    display: none;
+}
+
+div.cavalo{
+    text-align: center;
+    width: 25%;
+    position: relative;
+}
+
+div.cavalo img{
+    padding-top: 100px;
+    width: 80%;
+}
+
+div.navegação-manual{
+    position: absolute;
+    width: 35%;
+    display: flex;
+    justify-content: center;
+    padding-left: 40px;
+}
+
+div.navegação-manual > label.btn-manual{
+    border: 2px solid rgba(0, 0, 0, 0.438);
+    padding: 10px;
+    border-radius: 50%;
+    margin-top: 40px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+label.btn-manual:not(:last-child){
+    margin-right: 10px;
+}
+
+label.btn-manual:hover{
+    background-color: rgb(89, 82, 82);
+}
+
+input#radio1:checked ~ .primeiro {
+    transform: translateX(0%);
+}
+
+input#radio2:checked ~ .cavalo {
+    transform: translateX(-100%);
+}
+
+input#radio3:checked ~ .cavalo {
+    transform: translateX(-200%);
+}
+
+input#radio4:checked ~ .cavalo {
+    transform: translateX(-300%);
+}
+
+#radio1:checked ~ .navegação-auto .auto-bnt1,
+#radio2:checked ~ .navegação-auto .auto-bnt2,
+#radio3:checked ~ .navegação-auto .auto-bnt3,
+#radio4:checked ~ .navegação-auto .auto-bnt4 {
+    background-color: black;
+}
+
+span{
+    color: #6b1bc6;
+}
+
+div.logo-forlogic {
+    display: flex;
+    width: 70%;
+    height: 40px;
+}
+
+div.logo-forlogic > p {
+    display: inline-block;
+
+
+}
+
+
