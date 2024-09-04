@@ -3,49 +3,146 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 html, body {
   height: 100vh;
   width: 100vw;
   background-color: white;
+  font-family: Arial, sans-serif;
 }
 
-main {
-    position: relative;
-    height: 100vh;
-    width: 18%;
+#top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    margin-left: 18%; /* Margem para não sobrepor a sidebar */
+    height: 70px;
+    position: fixed; /* Fixar a barra superior no topo */
+    top: 0;
+    left: 0;
+    width: 82%; /* Espaço restante ao lado da sidebar */
+    z-index: 2; /* Garantir que a barra superior esteja acima da sidebar */
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 5px 10px;
+    width: 300px;
+}
+
+.search-input {
+    border: none;
+    outline: none;
+    flex: 1;
+    padding: 5px;
+    font-size: 16px;
+}
+
+#mode-toggle, #notifications, #profile {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+#mode-toggle span, #notifications span, #profile span {
+    font-size: 24px;
+    color: #6b1bc6;
+    cursor: pointer;
+}
+
+#profile {
     background-color: #6b1bc6;
-    border-top-right-radius: 10px;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.profile-pic {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
 }
 
 div#top-image {
+    background-image: url('../../img/logoescrita-white.svg');
+    background-position: center;
+    background-repeat: no-repeat;
     padding: 20px;
+    height: 70px;
+    background-color: #6b1bc6;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
 }
 
 aside#side-bar-left {
     background-color: white;
-    position: absolute;
-    top: 10%;
-    left: 0%;
-
-    height: 85%;
-    width: 100%;
-
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%; /* Ocupa toda a altura da página */
+    width: 18%; /* Largura da sidebar */
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.104);
+    z-index: 1; /* Certificar que a sidebar está acima de outros elementos */
 }
 
+#side-bar-left div#botoes-laterais {
+    position: relative; 
+    top: 2%; /* Ajustar a margem interna da sidebar */
+    margin: auto;
+    margin-left: 15px;
+    width: 200px;
+}
 
-div#botoes-laterais {
-    position: relative;
-    top: 150px;
+#botoes-laterais {
+    margin-top: 100px; /* Distância do topo da sidebar */
     left: 10px;
     width: 300px;
+    align-items: center;
 }
 
+#botoes-laterais button {
+    margin: 10px;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    background-color: white;
+    color: #6b1bc6;
+    text-align: left;
+    font-size: 15px;
+    cursor: pointer;
+    align-items: center;    
+}
 
+#botoes-laterais button:hover {
+    background-color: #6b1bc6;
+    color: white;
+}
 
+hr {
+    width: 90%;
+    margin-left: auto;
+    border-color: #cccccc43;
+}
 
+#bottom-color {
+    padding: 30px;
+    background-color: #6b1bc6;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    
+}
 
 iframe {
     display: none;
