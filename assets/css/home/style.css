@@ -1,5 +1,14 @@
 @charset "UTF-8";
 
+:root {
+    --light-bg: #fff; /* Fundo claro */
+    --dark-bg: #28292c;  /* Fundo escuro */
+    --light-text: #000;  /* Texto escuro para fundo claro */
+    --dark-text: #fff; /* Texto claro para fundo escuro */
+    --link: rgb(27, 129, 112);
+    --link-hover: rgb(24, 94, 82);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -9,7 +18,8 @@
 html, body {
   height: 100vh;
   width: 100vw;
-  background-color: white;
+  background-color: var(--light-bg); /* Fundo claro por padrão */
+  color: var(--light-text); /* Texto escuro por padrão */
   font-family: Arial, sans-serif;
 }
 
@@ -18,10 +28,9 @@ html, body {
     align-items: center;
     justify-content: space-between;
     padding: 10px 20px;
-    background-color: white;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: var(--light-bg);
     margin-left: 18%; /* Margem para não sobrepor a sidebar */
-    height: 70px;
+    height: 80px;
     position: fixed; /* Fixar a barra superior no topo */
     top: 0;
     left: 0;
@@ -32,10 +41,15 @@ html, body {
 .search-container {
     display: flex;
     align-items: center;
-    border: 1px solid #ccc;
+    border: 2px solid #cccccc5f;
     border-radius: 8px;
-    padding: 5px 10px;
-    width: 300px;
+    padding: 10px 10px;
+    width: 550px;
+    margin-left: 20px;
+}
+
+.search-input::placeholder {
+    opacity: 0.5;
 }
 
 .search-input {
@@ -46,31 +60,92 @@ html, body {
     font-size: 16px;
 }
 
-#mode-toggle, #notifications, #profile {
-    display: flex;
-    align-items: center;
-    margin-left: 20px;
+/* Ajuste para o Toggle Switch */
+.toggle-switch {
+    position: relative;
+    width: 50px; /* Ajuste de largura */
+    height: 24px; /* Ajuste de altura */
+    margin-right: 20px;
 }
 
-#mode-toggle span, #notifications span, #profile span {
-    font-size: 24px;
-    color: #6b1bc6;
+.toggle-switch label {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: var(--dark-bg); /* Fundo escuro por padrão */
+    border-radius: 24px;
     cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.toggle-switch input {
+    display: none;
+}
+
+.toggle-switch .slider {
+    position: relative;
+    background-color: var(--light-bg); /* Fundo claro da bolinha */
+    width: 100%;
+    height: 100%;
+    border-radius: 24px;
+    transition: 0.3s;
+}
+
+.toggle-switch .slider::before {
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background-color: white; /* Cor da lua (branca) */
+    border-radius: 50%;
+    top: 3px;
+    left: 3px;
+    box-shadow: inset 4px -4px 0px 0px var(--dark-bg); /* Criando o efeito de lua */
+    transition: 0.3s;
+}
+
+.toggle-switch input:checked + .slider {
+    background-color: var(--dark-bg); /* Fundo do círculo externo preto no modo claro */
+}
+
+.toggle-switch input:checked + .slider::before {
+    transform: translateX(26px);
+    background-color: white; /* A bolinha continua branca no modo claro */
+    box-shadow: inset 4px -4px 0px 0px black; /* A sombra para criar o efeito de lua continua preta */
+}
+
+
+#notifications {
+    margin-right: 10px;
 }
 
 #profile {
     background-color: #6b1bc6;
-    color: white;
-    padding: 5px 15px;
-    border-radius: 20px;
+    padding: 7px 10px;
+    width: 240px;
+    margin-right: 10px;
+    border-radius: 10px;
     display: flex;
     align-items: center;
 }
 
+#profile > span.name {
+    color: var(--light-text); /* Texto do perfil */
+    font-size: 14px;
+    font-weight: lighter;
+    text-align: left;
+}
+
+#profile > span#dropdown {
+    margin-right: 10px;
+    color: var(--light-text); /* Texto do perfil */
+}
+
 .profile-pic {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    border-radius: 10%;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.308);
     margin-right: 10px;
 }
 
@@ -85,8 +160,8 @@ div#top-image {
     border-bottom-right-radius: 8px;
 }
 
-aside#side-bar-left {
-    background-color: white;
+menu#side-bar-left {
+    background-color: var(--light-bg); /* Fundo claro por padrão */
     position: fixed;
     top: 0;
     left: 0;
@@ -96,7 +171,7 @@ aside#side-bar-left {
     z-index: 1; /* Certificar que a sidebar está acima de outros elementos */
 }
 
-#side-bar-left div#botoes-laterais {
+#side-bar-left div#menu-buttons {
     position: relative; 
     top: 2%; /* Ajustar a margem interna da sidebar */
     margin: auto;
@@ -104,20 +179,20 @@ aside#side-bar-left {
     width: 200px;
 }
 
-#botoes-laterais {
+#menu-buttons {
     margin-top: 100px; /* Distância do topo da sidebar */
     left: 10px;
     width: 300px;
     align-items: center;
 }
 
-#botoes-laterais button {
+#menu-buttons button {
     margin: 10px;
     padding: 10px;
     width: 100%;
     border: none;
     border-radius: 8px;
-    background-color: white;
+    background-color: var(--light-bg); /* Fundo claro por padrão */
     color: #6b1bc6;
     text-align: left;
     font-size: 15px;
@@ -125,7 +200,7 @@ aside#side-bar-left {
     align-items: center;    
 }
 
-#botoes-laterais button:hover {
+#menu-buttons button:hover {
     background-color: #6b1bc6;
     color: white;
 }
@@ -137,11 +212,12 @@ hr {
 }
 
 #bottom-color {
-    padding: 30px;
+    position: absolute; 
+    top: 663px; 
+    padding: 20px;
+    height:40px;
+    width: 100%;
     background-color: #6b1bc6;
-    border-top-right-radius: 8px;
-    border-bottom-right-radius: 8px;
-    
 }
 
 iframe {

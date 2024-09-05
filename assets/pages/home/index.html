@@ -17,23 +17,26 @@
             <input type="text" placeholder="Pesquise aqui" class="search-input">
             <span class="material-symbols-outlined">search</span>
         </div>
-        <div id="mode-toggle">
-            <span class="material-symbols-outlined">toggle_on</span>
+        <div class="toggle-switch">
+            <label>
+                <input type="checkbox" id="themeSwitcher">
+                <span class="slider"></span>
+                <a href = 'https://dribbble.com/shots/14199649-Dark-Light-Mode-Toggle-Switch-Pattern-A11y'>
+            </label>
         </div>
         <div id="notifications">
             <span class="material-symbols-outlined">notifications</span>
         </div>
         <div id="profile">
-            <img src="../../img/profile.jpg" alt="Foto de Perfil" class="profile-pic">
-            <span>Eduardo Mendes [Administrador]</span> <!-- Nome do usuário -->
-            <span class="material-symbols-outlined">arrow_drop_down</span>
+            <img src="../../img/profile-pic.jpg" alt="Foto de Perfil" class="profile-pic">
+            <span class="name">Leonardo Girotto [Administrador]</span>
+            <span class="material-symbols-outlined" id="dropdown">expand_circle_down</span>
         </div>
     </div>
 
-    <aside id="side-bar-left">
-        <div id="top-image">
-        </div>
-        <div id="botoes-laterais">
+    <menu id="side-bar-left">
+        <div id="top-image"></div>
+        <div id="menu-buttons">
             <button onclick="showIframe('voluntario')">
                 <span class="material-symbols-outlined">space_dashboard</span> Visão Geral
             </button>
@@ -49,30 +52,12 @@
                 <span class="material-symbols-outlined">insert_chart</span> Relatórios
             </button>
             <hr>
-            <button onclick="showIframe('configuracoes')">
-                <span class="material-symbols-outlined">settings</span> Configurações
-            </button>
-            <div id="bottom-color"></div>
         </div>
-        <section id="conteudo-central">
-            <iframe src="" name="voluntario" id="voluntario"></iframe>
-            <iframe src="" name="termo" id="termo"></iframe>
-            <iframe src="" name="oficinas" id="oficinas"></iframe>
-            <iframe src="" name="atividades" id="atividades"></iframe>
-        </section>
-    </aside>
+        <div id="bottom-color"></div>
+    </menu>
 
-
-    <script>
-        function showIframe(iframeId) {
-            const iframes = document.querySelectorAll('iframe');
-            iframes.forEach(iframe => iframe.classList.remove('active'));
-
-            document.getElementById(iframeId).classList.add('active');
-        }
-
-        showIframe('voluntario');
-    </script>
+    <script src="script.js"></script>
+    <script src="../../js/dark-mode.js"></script>
 </body>
 
 </html>
