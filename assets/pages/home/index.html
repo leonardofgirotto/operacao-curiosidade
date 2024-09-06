@@ -1,63 +1,58 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>Operação Curiosidade - Home</title>
     <link rel="shortcut icon" href="../../img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="../../css/home/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 </head>
-
 <body>
-    <div id="top-bar">
-        <div class="search-container">
-            <input type="text" placeholder="Pesquise aqui" class="search-input">
-            <span class="material-symbols-outlined">search</span>
-        </div>
-        <div class="toggle-switch">
-            <label>
-                <input type="checkbox" id="themeSwitcher">
-                <span class="slider"></span>
-                <a href = 'https://dribbble.com/shots/14199649-Dark-Light-Mode-Toggle-Switch-Pattern-A11y'>
-            </label>
-        </div>
-        <div id="notifications">
-            <span class="material-symbols-outlined">notifications</span>
-        </div>
-        <div id="profile">
-            <img src="../../img/profile-pic.jpg" alt="Foto de Perfil" class="profile-pic">
-            <span class="name">Leonardo Girotto [Administrador]</span>
-            <span class="material-symbols-outlined" id="dropdown">expand_circle_down</span>
-        </div>
-    </div>
+    <main>
+        <section class="menu">
+            <div class="opc">
+                <img src="../../img/logoescrita-white.svg" alt="logo">
+            </div>
+            <div class="opcoes">
+                <div class="opcao" id="vg" onclick="visaoGeral()"><span class="material-symbols-outlined">space_dashboard</span><p>Visão Geral</p></div>
+                <hr>
+                <div class="opcao" id="cc" onclick="cadastrarCuri()"><span class="material-symbols-outlined">add_box</span><p>Cadastrar Curiosidade</p></div>
+                <hr>
+                <div class="opcao" id="mc" onclick="meuCad()"><span class="material-symbols-outlined">patient_list</span><p>Meus Cadastros</p></div>
+                <div class="opcao" id="re" onclick="relatorios()"><span class="material-symbols-outlined">insert_chart</span><p>Relatórios</p></div>
+                <hr>
+            </div>
+            <div id="bottom-color"></div>f
+        </section>
+        <section class="home">
+            <header>
+                <div class="cont-imput">
+                    <span class="material-symbols-outlined">search</span>
+                    <input type="text" name="pesquisar" id="ipesquisar" placeholder="Pesquise aqui">
+                </div>
+                <div class="cont-botao">
+                    <div id="toggleBt">
+                        <a href="javascript:void(0);" id="toggle">
+                            <img id="paintIcon" src="../../img/paintIcon.svg" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="cont-sino">
+                    <span class="material-symbols-outlined">notifications</span>
+                </div>
 
-    <menu id="side-bar-left">
-        <div id="top-image"></div>
-        <div id="menu-buttons">
-            <button onclick="showIframe('voluntario')">
-                <span class="material-symbols-outlined">space_dashboard</span> Visão Geral
-            </button>
-            <hr>
-            <button onclick="showIframe('curiosidade')">
-                <span class="material-symbols-outlined">add_box</span> Cadastrar Curiosidade
-            </button>
-            <hr>
-            <button onclick="showIframe('cadastros')">
-                <span class="material-symbols-outlined">patient_list</span> Meus Cadastros
-            </button>
-            <button onclick="showIframe('relatorios')">
-                <span class="material-symbols-outlined">insert_chart</span> Relatórios
-            </button>
-            <hr>
-        </div>
-        <div id="bottom-color"></div>
-    </menu>
-
-    <script src="script.js"></script>
-    <script src="../../js/dark-mode.js"></script>
+                <div class="perfilzinho">
+                    <img src="../../img/profile-pic.jpg" alt="">
+                    <p>Leonardo Girotto <br> |Administrador|</p>
+                    <span class="material-symbols-outlined">expand_circle_down</span>
+                </div>
+            </header>
+            <div class="iframe">
+                <iframe src="perfil.html" frameborder="0" id="iframe"></iframe>
+            </div>
+        </section>
+    </main>
+    <script src="scripts/script-home.js"></script>
 </body>
-
 </html>
