@@ -1,7 +1,5 @@
 @charset "UTF-8";
-
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
-
 
 *{
     margin: 0;
@@ -20,17 +18,38 @@ body, html{
 main{
     height: 100%;
     width: 100%;
+    overflow: hidden; /* Evita overflow global */
 }
 
 section.cadastros{
     display: flex;
     flex-direction: column;
     width: 95%;
+    height: 90vh; /* Ajuste a altura conforme necessário */
+    overflow-y: auto; /* Habilita a rolagem vertical */
+}
+
+/* Estilo da barra de rolagem personalizada */
+section.cadastros::-webkit-scrollbar {
+    width: 8px;
+}
+
+section.cadastros::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+section.cadastros::-webkit-scrollbar-thumb {
+    background: #555; /* Cor da barra de rolagem */
+    border-radius: 4px;
+}
+
+section.cadastros::-webkit-scrollbar-thumb:hover {
+    background: #6b1bc6;
 }
 
 section.cadastros > div{
     width: 600px;
-    height: 230px;
+    height: 220px;
     margin-left: 70px;
     margin-top: 10px;
     margin-bottom: 20px;
@@ -70,25 +89,6 @@ div.user-info > div.user-details > p{
     margin-bottom: 10px;
 }
 
-div.user-info > div.user-details > span{
-    margin-top: 10px;
-    margin-left: 20px;
-    padding-left: 5px;
-    padding-right: 5px;
-    padding-bottom: 2px;
-    color: rgb(41, 157, 41);
-    background-color: rgba(0, 128, 0, 0.193);
-    border: 2px solid rgb(68, 174, 68);
-    border-radius: 20px;
-    font-size: 0.9em;
-}
-
-div.user-info > div.user-details > span#inativo{
-    color: rgb(186, 6, 6);
-    background-color: rgba(255, 0, 0, 0.232);
-    border: 2px solid rgb(110, 10, 10);
-}
-
 span.user-id{
     position: absolute;
     top: 10%;
@@ -103,7 +103,7 @@ span.user-id{
 }
 
 .user-stats {
-    margin-top: 5px;
+    margin-top: 15px;
 }
 
 .stat#pri{
@@ -132,14 +132,30 @@ span.user-id{
 }
 
 div.user-meta{
-    margin-top: 10px;
+    margin-top: 20px;
     margin-left: 20px;
     font-size: 0.9em;
-    color: rgb(193, 192, 192);
+    color: #6b1bc6;
 }
 
-div.user-meta > p > span{
+div.user-meta > p#p{
+    margin-bottom: 10px;
+}
+
+div.user-meta > p{
+    position: relative;
+    padding-left: 20px;
+}
+
+div.user-meta > p > span.material-symbols-outlined{
+    position: absolute;
     font-size: 16px;
+    top: 3px;
+    left: -0px;
+}
+
+div.user-meta > p > span.comp{
+    color: black;
 }
 
 div.user-actions{

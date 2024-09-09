@@ -1,6 +1,29 @@
 document.getElementById('toggleBt').addEventListener('click', function() {
     this.classList.toggle('active');
+    document.body.classList.toggle('dark-theme');
 });
+
+// Se você deseja adicionar um estilo para o tema escuro
+document.body.classList.add('light-theme'); // Define o tema claro por padrão
+
+// CSS Adicional para os temas
+document.head.insertAdjacentHTML('beforeend', `
+    <style>
+        .dark-theme {
+            background-color: #121212;
+            color: #ffffff;
+        }
+        .dark-theme #toggleBt {
+            background-color: #6b1bc6;
+        }
+        .dark-theme #toggle {
+            background-color: #ffffff;
+            left: calc(100% - 30px);
+        }
+        /* Adicione mais estilos conforme necessário para o tema escuro */
+    </style>
+`);
+
 
 var vg = document.getElementById('vg');
 var cc = document.getElementById('cc');

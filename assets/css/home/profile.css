@@ -88,6 +88,24 @@ div.cadastros{
     flex-direction: column;
 }
 
+div.cadastros::-webkit-scrollbar {
+    width: 8px;
+}
+ 
+div.cadastros::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+ 
+div.cadastros::-webkit-scrollbar-thumb {
+    background: #6b1bc6; /* Cor da barra de rolagem */
+    border-radius: 4px;
+}
+ 
+div.cadastros::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+
 div#total{
     margin-top: 10px;
 }
@@ -98,20 +116,20 @@ div.cadastro{
     margin-left: 20%;
     margin-top: 20px;
     box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.253);
-    border-radius: 10px;
+    border-radius: 20px;
 }
 
 div.cadastro > .caracterisca{
     background-color: #6b1bc6;
     height: 17%;
-    border-radius: 10px 10px 0px 0px;
+    border-radius: 20px 20px 0px 0px;
     text-align: center;
     color: white;
 }
 
 div.cadastro > .quantidade{
     height: 83%;
-    border-radius: 0px 0px 10px 10px;
+    border-radius: 0px 0px 20px 20px;
     text-align: center;
 }
 
