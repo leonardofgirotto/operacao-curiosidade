@@ -186,8 +186,8 @@ div.cont-botao{
 }
 
 #paintIcon{
-    width: 100%;
-    margin: auto;
+    width: 90%;
+    height: 90%;
 }
 
 div.cont-sino{
@@ -197,7 +197,7 @@ div.cont-sino{
     cursor: pointer;
 }
 
-div.perfilzinho{
+div.user-profile{
     position: relative;
     margin-top: 30px;
     margin-left: 50px;
@@ -209,7 +209,7 @@ div.perfilzinho{
     box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.245);
 }
 
-div.perfilzinho > img{
+div.user-profile > img{
     width: 45px;
     height: 45px;
     margin-top: 10px;
@@ -217,7 +217,7 @@ div.perfilzinho > img{
     margin-left: 20px;
 }
 
-div.perfilzinho > p{
+div.user-profile > p{
     display: inline-block;
     color: white;
     margin-left: 10px;
@@ -228,7 +228,7 @@ div.perfilzinho > p{
 }
 
 
-div.perfilzinho > span{
+div.user-profile > span{
     position: absolute;
     top: 50%;
     right: 20px;
@@ -237,6 +237,6 @@ div.perfilzinho > span{
     cursor: pointer;
 }
 
-div.perfilzinho > span:hover{
+div.user-profile > span:hover{
     color: #cbabf0;
 }

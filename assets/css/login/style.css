@@ -27,7 +27,7 @@ section#login {
 }
 
 section#cebola {
-    display: none;
+    display: none; /* Oculta o carrossel por padrão */
 }
 
 div#form {
@@ -48,7 +48,6 @@ div.logo > img {
     padding-top: 65px;
     padding-bottom: 40px;
 }
-
 
 div.logo-forlogic > img {
     width: 300px;
@@ -75,7 +74,6 @@ div.form {
     padding: 10px;
     margin-left: 20px;
     font-weight: 600;
-
 }
 
 div.form p.p {
@@ -160,7 +158,25 @@ input[type="button"]:hover {
     background-color: #7f42c4;
 }
 
+/* Ajustes para dispositivos móveis */
+@media screen and (max-width: 767px) {
+    section#cebola {
+        display: none; /* Oculta o carrossel em dispositivos móveis menores */
+    }
+}
+
+/* Ajustes para tablets e maiores */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    section#cebola {
+        display: block; /* Mostra o carrossel em tablets */
+    }
+}
+
+/* Ajustes para desktops e maiores */
 @media screen and (min-width: 992px) {
+    section#cebola {
+        display: block; /* Mostra o carrossel em desktops e maiores */
+    }
 
     main {
         display: flex;
@@ -312,28 +328,19 @@ input[type="button"]:hover {
         transform: translateX(-300%);
     }
 
-    #radio1:checked ~ .navegacao-auto .auto-btn1 {
-        background-color: black;
+    div.navegacao-auto div:nth-child(1):hover {
+        background-color: rgba(0, 0, 0, 0.438);
     }
-
-    #radio2:checked ~ .navegacao-auto .auto-btn2 {
-        background-color: black;
+    
+    div.navegacao-auto div:nth-child(2):hover {
+        background-color: rgba(0, 0, 0, 0.438);
     }
-
-    #radio3:checked ~ .navegacao-auto .auto-btn3 {
-        background-color: black;
+    
+    div.navegacao-auto div:nth-child(3):hover {
+        background-color: rgba(0, 0, 0, 0.438);
     }
-
-    #radio4:checked ~ .navegacao-auto .auto-btn4 {
-        background-color: black;
-    }
-
-    div.logofor {
-        margin-top: 25%;
-        text-align: center;
-    }
-
-    span {
-        color: #6b1bc6;
+    
+    div.navegacao-auto div:nth-child(4):hover {
+        background-color: rgba(0, 0, 0, 0.438);
     }
 }
