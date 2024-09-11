@@ -23,7 +23,7 @@ main{
     display: flex;
 }
 
-section.menu{
+.sidebar{
     background-color: #ffffff;
     height: 100%;
     width: 18.5%;
@@ -31,7 +31,7 @@ section.menu{
     border-radius: 0px 10px 0px 0px;
 }
 
-section.menu > div.opc > img{
+.sidebar > div.logo-opc > img{
     padding: 20px;
     width: 100%;
     background-color: #6b1bc6;
@@ -39,33 +39,39 @@ section.menu > div.opc > img{
 }
 
 hr{
-    width: 180px;
-    margin: 0 auto;
+    width: 200px;
+    margin: 10px auto;
 }
 
-div.opcao{
+.option{
     color: #6b1bc6;
-    width: 225px;
-    height: 40px;
-    margin-left: 20px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    border-radius: 10px;
+    background-color: white;
+    display: flex;
+    align-items: center;
     cursor: pointer;
+    border: none;
+    margin: 0 auto;
+    border-radius: 10px;
+    padding: 10px 20px; /* Ajusta o espaçamento interno */
+    width: 90%; /* Para controlar o tamanho do botão */
+    justify-content: start; /* Alinha conteúdo à esquerda */
 }
 
-div.opcao > p{
-    display: inline-block;
-    padding-left: 15px;
+.option > p{
+    margin: 0; /* Remover margens extras */
+    font-size: 12pt;
 }
 
-div.opcao > span{
-    top: 80%;
-    left: 50%;
-    transform: translate(30%,30%);
+.option > span{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin-right: 10px; /* Espaçamento entre o ícone e o texto */
+    font-size: 1.5em; /* Ajuste o tamanho do ícone, se necessário */
 }
 
-div.opcao:hover{
+
+.option:hover{
     background-color: #6b1bc6;
     color: white;
 }

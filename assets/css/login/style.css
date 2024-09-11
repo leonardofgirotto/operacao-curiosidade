@@ -26,7 +26,7 @@ section#login {
     height: 100%;
 }
 
-section#cebola {
+section#onion {
     display: none; /* Oculta o carrossel por padrão */
 }
 
@@ -81,7 +81,7 @@ div.form p.p {
     margin-bottom: 5px;
 }
 
-div#primeiro {
+div#name-email {
     padding-top: 80px;
 }
 
@@ -124,19 +124,19 @@ div.conteiner-input input::placeholder {
     color: rgba(128, 128, 128, 0.474);
 }
 
-div.esqueci {
+div.forgot-password {
     width: 94%;
     margin: 0 auto;
     text-align: right;
     padding-bottom: 60px;
 }
 
-div.esqueci > p {
+div.forgot-password > p {
     color: #6b1bc6;
     font-size: 1em;
 }
 
-div.esqueci > p > a:hover {
+div.forgot-password > p > a:hover {
     font-weight: bold;
 }
 
@@ -160,21 +160,21 @@ input[type="button"]:hover {
 
 /* Ajustes para dispositivos móveis */
 @media screen and (max-width: 767px) {
-    section#cebola {
+    section#onion {
         display: none; /* Oculta o carrossel em dispositivos móveis menores */
     }
 }
 
 /* Ajustes para tablets e maiores */
 @media screen and (min-width: 768px) and (max-width: 991px) {
-    section#cebola {
+    section#onion {
         display: block; /* Mostra o carrossel em tablets */
     }
 }
 
 /* Ajustes para desktops e maiores */
 @media screen and (min-width: 992px) {
-    section#cebola {
+    section#onion {
         display: block; /* Mostra o carrossel em desktops e maiores */
     }
 
@@ -208,7 +208,7 @@ input[type="button"]:hover {
         width: 50%;
     }
 
-    section#cebola {
+    section#onion {
         display: block;
         width: 60%;
     }
@@ -221,11 +221,11 @@ input[type="button"]:hover {
         box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.347);
     }
 
-    div#primeiro {
+    div#name-email {
         padding-top: 40px;
     }
 
-    div.carrossel {
+    div.carousel {
         margin-top: -10%;
         margin-left: 15%;
         width: 70%;
@@ -233,17 +233,17 @@ input[type="button"]:hover {
         overflow: hidden;
     }
 
-    div.cavalinhos {
+    div.slides {
         width: 400%;
         height: 85%;
         display: flex;
     }
 
-    div.cavalinhos input {
+    div.slides input {
         display: none;
     }
 
-    div.cavalo {
+    div.slides {
         text-align: center;
         width: 25%;
         position: relative;
@@ -251,96 +251,8 @@ input[type="button"]:hover {
         font-style: italic;
     }
 
-    div.cavalo img {
+    div.slides img {
         padding-top: 100px;
         width: 70%;
-    }
-
-    div.navegacao-manual {
-        position: absolute;
-        width: 35%;
-        display: flex;
-        justify-content: center;
-        padding-left: 40px;
-        top: 75%;
-        transform: translateY(-50%);
-        z-index: 10;
-    }
-
-    div.navegacao-manual > label.btn-manual {
-        background-color: rgba(128, 128, 128, 0.314);
-        padding: 10px;
-        border-radius: 50%;
-        margin-top: 40px;
-        cursor: pointer;
-        transition: 1s;
-    }
-
-    label.btn-manual:not(:last-child) {
-        margin-right: 10px;
-    }
-
-    label.btn-manual:hover {
-        background-color: rgb(0, 0, 0);
-    }
-
-    div.navegacao-auto {
-        position: absolute;
-        width: 35%;
-        display: flex;
-        justify-content: center;
-        padding-left: 40px;
-        top: 76%;
-        transform: translateY(10%);
-        z-index: 5;
-        opacity: 0.5;
-    }
-
-     div.navegacao-auto div {
-        border: 2px solid rgba(0, 0, 0, 0.438);
-        padding: 10px;
-        border-radius: 50%;
-        cursor: pointer;
-        transition: opacity 0.5s, background-color 1s;
-    }
- 
-    div.navegacao-auto div:hover {
-        opacity: 1;
-    } 
-
-    div.navegacao-auto div:not(:last-child) {
-        margin-right: 10px;
-    }
-
-    input#radio1:checked ~ .primeiro {
-        transform: translateX(0%);
-    }
-
-    input#radio2:checked ~ .cavalo {
-        transform: translateX(-100%);
-    }
-
-    input#radio3:checked ~ .cavalo {
-        transform: translateX(-200%);
-    }
-
-    input#radio4:checked ~ .cavalo {
-        transform: translateX(-300%);
-    }
-
-    div.navegacao-auto div:nth-child(1):hover {
-        background-color: rgba(0, 0, 0, 0.438);
-    }
-    
-    div.navegacao-auto div:nth-child(2):hover {
-        background-color: rgba(0, 0, 0, 0.438);
-    }
-    
-    div.navegacao-auto div:nth-child(3):hover {
-        background-color: rgba(0, 0, 0, 0.438);
-    }
-    
-    div.navegacao-auto div:nth-child(4):hover {
-        background-color: rgba(0, 0, 0, 0.438);
     }
 }
