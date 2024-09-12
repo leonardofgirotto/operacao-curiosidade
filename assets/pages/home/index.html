@@ -4,30 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Operação Curiosidade</title>
-    <link rel="stylesheet" href="
-    https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"/>
     <link rel="shortcut icon" href="../../img/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="../../css/home/syle.css">
+    <link rel="stylesheet" href="../../css/home/index.css">
 </head>
 <body>
     <header>
-        <div class="cont-imput">
-            <input type="text" name="pesquisar" id="ipesquisar" placeholder="Pesquise aqui">
-            <span class="material-symbols-outlined">search</span>
-        </div>
-        <div class="cont-botao">
-            <div id="toggleBt">
-                <a href="javascript:void(0);" id="toggle">
-                    <img id="paintIcon" src="../../img/paintIcon.svg" alt="">
-                </a>
+        <div class="search-box">
+            <div class="search-container">
+                <input type="text" name="search" id="search" placeholder="Pesquise aqui">
+                <span class="material-symbols-outlined search-icon" id="search-icon">search</span>
             </div>
         </div>
-        <div class="cont-sino">
+        <div class="theme-toggle">
+            <label class="switch">
+                <input type="checkbox" id="themeSwitcher">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="notifications">
             <span class="material-symbols-outlined">notifications</span>
         </div>
-
         <div class="user-profile">
-            <img src="../../img/" alt="">
+            <img src="../../img/profile-pic.png" alt="Perfil">
             <p>Leonardo Girotto <br> |Administrador|</p>
             <span class="material-symbols-outlined">expand_circle_down</span>
         </div>
@@ -39,7 +38,7 @@
         <div class="options">
             <button class="option" onclick="showIframe('dashboard')">
                 <span class="material-symbols-outlined">space_dashboard</span>
-                Visão geral
+                <p><a href="dashboard.html" target="dashboard">Visão geral</a></p>
             </button>
             <hr>
             <button class="option" onclick="showIframe('register')">
@@ -53,7 +52,7 @@
             </button>
             <button class="option" onclick="showIframe('reports')">
                 <span class="material-symbols-outlined">insert_chart</span>
-                <p>Relatórios</p>
+                <p><a href="reports.html" target="reports">Relatórios</a></p>
             </button>
             <hr>
         </div>
@@ -86,5 +85,6 @@
         // Exibir o iframe "dashboard" por padrão ao carregar a página
         showIframe('dashboard');
     </script>
+    <script src="../../js/home/dark-mode.js"></script>
 </body>
 </html>
